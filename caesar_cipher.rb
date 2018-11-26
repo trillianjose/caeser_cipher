@@ -1,13 +1,13 @@
 def caesar_cipher(text, shift)
   coded = Array.new
-  normal= ("a".."z").to_a
-	capital = ("A".."Z").to_a
+  downcased_letter= ('a'..'z').to_a
+	upcased_letter = ('A'..'Z').to_a
 
-	text.split("").each do |character|
-		if  normal.include?(character)
-			coded <<  normal[( normal.index(character) + shift ) % 26]
-		elsif capital.include?(character)
-			coded << capital[( capital.index(character) + shift ) % 26]
+	text.split('').each do |character|
+		if  downcased_letter.include?(character)
+			coded <<  downcased_letter[( downcased_letter.index(character) + shift ) % 26]
+		elsif upcased_letter.include?(character)
+			coded << upcased_letter[( upcased_letter.index(character) + shift ) % 26]
 		else
 			coded << character
 		end
@@ -16,8 +16,8 @@ def caesar_cipher(text, shift)
 	coded.join
 end
 
-puts "Escriba la palabra a encriptar"
+puts 'Write the word to encript'
 text = gets.chomp
-puts "Cuantas veces desea el cambio"
+puts 'How many places should be changed'
 shift = gets.chomp.to_i
 puts caesar_cipher(text, shift)
