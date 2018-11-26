@@ -1,6 +1,6 @@
 def caesar_cipher(text, shift)
   coded = Array.new
-  downcased_letter= ('a'..'z').to_a
+  downcased_letter = ('a'..'z').to_a
 	upcased_letter = ('A'..'Z').to_a
 
 	text.split('').each do |character|
