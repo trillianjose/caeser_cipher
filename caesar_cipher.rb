@@ -13,7 +13,7 @@ def caesar_cipher(text, shift)
     end
   end
 
-    coded.join
+  coded.join
 end
 
 puts 'Write the word to encript'
