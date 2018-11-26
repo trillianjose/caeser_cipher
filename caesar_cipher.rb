@@ -1,13 +1,13 @@
 def caesar_cipher(text, shift)
   coded = Array.new
-  downcased_letter = ('a'..'z').to_a
-	upcased_letter = ('A'..'Z').to_a
+  downcase_letter = ('a'..'z').to_a
+  upcase_letter = ('A'..'Z').to_a
 
 	text.split('').each do |character|
-		if  downcased_letter.include?(character)
-			coded <<  downcased_letter[( downcased_letter.index(character) + shift ) % 26]
-		elsif upcased_letter.include?(character)
-			coded << upcased_letter[( upcased_letter.index(character) + shift ) % 26]
+		if  downcase_letter.include?(character)
+			coded <<  downcase_letter[( downcase_letter.index(character) + shift ) % 26]
+		elsif upcase_letter.include?(character)
+			coded << upcase_letter[( upcase_letter.index(character) + shift ) % 26]
 		else
 			coded << character
 		end
