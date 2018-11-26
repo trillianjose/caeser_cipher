@@ -3,13 +3,13 @@ def caesar_cipher(text, shift)
   normal= ("a".."z").to_a
 	capital = ("A".."Z").to_a
 
-	text.split("").each do |i|
-		if  normal.include?(i)
-			coded <<  normal[( normal.index(i) + shift ) % 26]
-		elsif capital.include?(i)
-			coded << capital[( capital.index(i) + shift ) % 26]
+	text.split("").each do |character|
+		if  normal.include?(character)
+			coded <<  normal[( normal.index(character) + shift ) % 26]
+		elsif capital.include?(character)
+			coded << capital[( capital.index(character) + shift ) % 26]
 		else
-			coded << i
+			coded << character
 		end
 	end
 
